@@ -31,11 +31,6 @@ config :wavingforest, WavingforestWeb.Endpoint,
 # at the `config/runtime.exs`.
 config :wavingforest, Wavingforest.Mailer, adapter: Swoosh.Adapters.Local
 
-config :vite_phx,
-  release_app: :wavingforest,
-  vite_manifest: "priv/static/.vite/manifest.json",
-  dev_server_address: "http://localhost:5173"
-
 # Configure tailwind (the version is required)
 config :tailwind,
   version: "4.1.7",

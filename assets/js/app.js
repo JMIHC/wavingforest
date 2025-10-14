@@ -1,3 +1,6 @@
+// Import CSS for React components
+import "../css/components.css"
+
 // If you want to use Phoenix channels, run `mix help phx.gen.channel`
 // to get started and then uncomment the line below.
 // import "./user_socket.js"
@@ -14,7 +17,7 @@
 //
 //     import "some-package"
 //
-// If you have dependencies that try to import CSS, esbuild will generate a separate `app.css` file.
+// If you have dependencies that try to import CSS, Vite will generate a separate CSS file.
 // To load it, simply add a second `<link>` to your `root.html.heex` file.
 
 // Include phoenix_html to handle method=PUT/DELETE in forms and buttons.
@@ -23,13 +26,14 @@ import "phoenix_html"
 import {Socket} from "phoenix"
 import {LiveSocket} from "phoenix_live_view"
 import {hooks as colocatedHooks} from "phoenix-colocated/wavingforest"
-import topbar from "../vendor/topbar"
+import * as topbar from "../vendor/topbar"
+import { DashboardHook } from "./hooks/ReactHooks.jsx"
 
 const csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
 const liveSocket = new LiveSocket("/live", Socket, {
   longPollFallbackMs: 2500,
   params: {_csrf_token: csrfToken},
-  hooks: {...colocatedHooks},
+  hooks: {...colocatedHooks, DashboardHook},
 })
 
 // Show progress bar on live navigation and form submits

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "default",
+  "rsc": false,
+  "tsx": false,
+  "tailwind": {
+    "config": "tailwind.config.js",
+    "css": "css/components.css",
+    "baseColor": "slate",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "aliases": {
+    "components": "@/components/ui",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui",
+    "lib": "@/lib",
+    "hooks": "@/hooks"
+  },
+  "resolvedPaths": {
+    "utils": "/Users/jmc/Documents/waving-forest-online-2025/wavingforest/assets/lib/utils.js",
+    "tailwindConfig": "/Users/jmc/Documents/waving-forest-online-2025/wavingforest/assets/tailwind.config.js",
+    "tailwindCss": "/Users/jmc/Documents/waving-forest-online-2025/wavingforest/assets/css/components.css",
+    "components": "/Users/jmc/Documents/waving-forest-online-2025/wavingforest/assets/components/ui"
+  }
+}
