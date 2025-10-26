@@ -35,3 +35,4 @@ wavingforest-*.tar
 npm-debug.log
 /assets/node_modules/
 
+/docs
