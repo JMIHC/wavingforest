@@ -1,0 +1,111 @@
+defmodule WavingforestWeb.HomeLive do
+  use WavingforestWeb, :live_view
+
+  @impl true
+  def mount(_params, _session, socket) do
+    {:ok, socket}
+  end
+
+  @impl true
+  def render(assigns) do
+    ~H"""
+    <%!-- Main Container --%>
+    <div class="min-h-screen flex flex-col">
+      <%!-- Header --%>
+      <header class="navbar px-4 sm:px-6 lg:px-8 border-b border-base-300 bg-base-100">
+        <div class="flex-1">
+          <a href="/" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <h1 class="text-xl sm:text-2xl font-semibold tracking-tight">
+              Waving Forest <span class="font-light opacity-60">· John Mihdi Cornyn</span>
+            </h1>
+          </a>
+        </div>
+        <div class="flex-none">
+          <Layouts.theme_toggle />
+        </div>
+      </header>
+
+      <%!-- Hero Section with Side-by-Side Layout --%>
+      <main class="flex-1 flex flex-col lg:flex-row">
+        <%!-- Image Section --%>
+        <div class="w-full lg:w-1/2 min-h-[400px] lg:min-h-screen">
+          <img
+            src={~p"/images/qigonglanding.jpg"}
+            alt="QiGong trail"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <%!-- Content Section --%>
+        <div class="w-full lg:w-1/2 flex flex-col items-center justify-center px-6 sm:px-8 lg:px-16 py-12 lg:py-16 bg-base-100">
+          <div class="max-w-xl space-y-10">
+            <%!-- Greeting --%>
+            <div class="space-y-5">
+              <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+                Welcome to the Journey
+              </h2>
+              <p class="text-2xl sm:text-3xl font-light opacity-80 font-serif italic">
+                Discover QiGong with John Mihdi Cornyn
+              </p>
+            </div>
+
+            <%!-- Description --%>
+            <div>
+              <p class="text-lg sm:text-xl leading-relaxed opacity-75 font-light">
+                Join me for transformative QiGong classes that harmonize body, mind, and spirit.
+              </p>
+            </div>
+
+            <%!-- Email Signup Form --%>
+            <div class="mt-12">
+              <div class="bg-base-200/50 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-base-300">
+                <h3 class="text-2xl sm:text-3xl font-semibold mb-3 tracking-tight">
+                  Begin Your Practice
+                </h3>
+                <p class="opacity-70 mb-7 text-base font-light">
+                  Sign up to receive class updates and start your QiGong journey.
+                </p>
+                <form class="space-y-5" action="#" method="post" id="email-signup-form">
+                  <div>
+                    <input
+                      type="email"
+                      name="email[address]"
+                      placeholder="Enter your email"
+                      required
+                      class="input input-bordered w-full text-base"
+                    />
+                  </div>
+                  <input type="hidden" name="email[source]" value="landing_page" />
+                  <button
+                    type="submit"
+                    class="btn btn-primary w-full text-base font-medium"
+                  >
+                    Get Started
+                  </button>
+                </form>
+                <p class="opacity-50 text-xs mt-5 font-light">
+                  Note: Email signup functionality will be implemented in the next phase
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <%!-- Footer --%>
+      <footer class="py-8 px-4 sm:px-6 lg:px-8 border-t border-base-300 bg-base-100">
+        <div class="max-w-7xl mx-auto">
+          <div class="flex flex-col sm:flex-row justify-between items-center gap-4 opacity-60 text-sm font-light">
+            <p>&copy; 2025 WavingForest. All rights reserved.</p>
+            <div class="flex gap-6">
+              <a href="#" class="hover:opacity-100 transition-opacity">About - coming soon</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <Layouts.flash_group flash={@flash} />
+    """
+  end
+end

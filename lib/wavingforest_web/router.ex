@@ -17,7 +17,7 @@ defmodule WavingforestWeb.Router do
   scope "/", WavingforestWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", HomeLive
     live "/dashboard", DashboardLive
   end
 
