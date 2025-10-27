@@ -1,5 +1,6 @@
 import daisyui from './vendor/daisyui.js';
 import daisyuiTheme from './vendor/daisyui-theme.js';
+import heroicons from './vendor/heroicons.js';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -48,6 +49,7 @@ export default {
     }
   },
   plugins: [
+    heroicons,
     daisyui,
     daisyuiTheme({
       themes: [

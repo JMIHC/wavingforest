@@ -31,7 +31,7 @@ defmodule WavingforestWeb.HomeLive do
         <div class="w-full lg:w-1/2 min-h-[400px] lg:min-h-screen">
           <img
             src={~p"/images/qigonglanding.jpg"}
-            alt="QiGong trail"
+            alt="Qi Gong trail"
             class="w-full h-full object-cover"
           />
         </div>
@@ -45,14 +45,14 @@ defmodule WavingforestWeb.HomeLive do
                 Welcome to the Journey
               </h2>
               <p class="text-2xl sm:text-3xl font-light opacity-80 font-serif italic">
-                Discover QiGong with John Mihdi Cornyn
+                Discover Qi Gong with John Mihdi Cornyn
               </p>
             </div>
 
             <%!-- Description --%>
             <div>
               <p class="text-lg sm:text-xl leading-relaxed opacity-75 font-light">
-                Join me for transformative QiGong classes that harmonize body, mind, and spirit.
+                Join me for transformative Qi Gong classes that harmonize body, mind, and spirit.
               </p>
             </div>
 
@@ -63,7 +63,7 @@ defmodule WavingforestWeb.HomeLive do
                   Begin Your Practice
                 </h3>
                 <p class="opacity-70 mb-7 text-base font-light">
-                  Sign up to receive class updates and start your QiGong journey.
+                  Sign up to receive class updates and start your Qi Gong journey.
                 </p>
                 <form class="space-y-5" action="#" method="post" id="email-signup-form">
                   <div>
